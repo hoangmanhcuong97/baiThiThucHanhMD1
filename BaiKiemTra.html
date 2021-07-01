@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<Script>
+  //Cau 1
+
+    function BacNhat(a,b){
+      if(a != 0){
+         x = -b/a;
+      }else {
+        alert("Khong ton tai phuong trinh bac nhat");
+      }
+      return x;
+    }
+
+    let a = +prompt("nhap vao gia tri cua a");
+    let b = +prompt("Nhap vao gia tri cua b");
+    if(BacNhat(a,b)){
+      document.write("Ket qua cua phuong trinh bac nhat la: x = " + x);
+    }
+
+  //Cau 2
+
+  function count(n,arr) {
+    let check = false;
+    let dem = 0;
+    for (let i = 0; i < arr.length; i++) {
+      let a = arr.indexOf(arr[i]);
+      if (a != -1) {
+        check = true;
+        dem++;
+      }
+    }
+    if(check){
+      return dem;
+    }
+  }
+
+  function check(){
+    let arr = [1,2,3,4];
+    let arr1 = [3,4,5,6];
+    for(let i = 0; i < arr.length;i++){
+      for(let j = 0; j<arr1.length; j++){
+        if(arr[j] === arr[i]){
+        }
+      }
+    }
+    alert("Co phan tu trung nhau trong mang moi");
+  }
+
+
+
+  //cau 3
+  function count(arr){
+    let arr1 = ["a", "o", "e", "u", "i"];
+    let check = false;
+    let count = 0;
+    for(let i = 0; i < arr.length; i++){
+      let n = arr.indexOf(arr1[i]);
+      if(n != -1){
+        check = true;
+        count++;
+      }
+    }
+    if(check){
+      return count;
+    } else {
+      return check;
+    }
+  }
+  let arr2 = prompt("nhap vao chuoi");
+  count(arr2);
+
+ // cau 4
+  class Animal{
+    constructor(name,weight) {
+      this.name = name;
+      this.weight = weight;
+    }
+    setName(newname){
+      return this.name = newname;
+    }
+    setWeight(newweight){
+      this.weight = newweight;
+    }
+    getName(){
+      return this.name;
+    }
+    getWeight(){
+      return this.weight;
+    }
+    tostring(){
+      return "name :"+this.name+";"+"weight:"+this.weight;
+    }
+
+  }
+
+
+  let animal1= new Animal("Elephant",45.6);
+  animal1.toString();
+
+  let animal2= new Animal("voi",50);
+  animal2.setName("Mouse");
+</Script>
+</body>
+</html>
